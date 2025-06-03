@@ -1,0 +1,111 @@
+body {
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-right: 200px;
+    position: relative;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px; 
+    height: 100%;
+    background: url('https://www.theartist.me/wp-content/uploads/2023/10/future-of-art-1200x800.jpg'); 
+    background-repeat: repeat-y; 
+    background-size: 200px auto;
+    z-index: -1; 
+}
+
+.large-font {
+    font-size: 28px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.right-text {
+    text-align: right;
+}
+
+h1 {
+    color: #ff4d4d;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #ff4d4d, #ff8787);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #4d79ff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #4d79ff, #87b3ff);
+    padding: 8px;
+    border-radius: 8px;
+}
+
+table {
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+td {
+    border: 2px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(odd) td {
+    background-color: #f0e68c;
+    color: #333;
+}
+
+tr:nth-child(even) td {
+    background-color: #add8e6;
+    color: #333;
+}
+
+td:first-child {
+    background: linear-gradient(45deg, #ffcccb, #ffb6c1);
+}
+
+td:nth-child(2) {
+    background: linear-gradient(45deg, #90ee90, #98fb98);
+}
+
+td:last-child {
+    background: linear-gradient(45deg, #87cefa, #b0e0e6);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+ul li {
+    margin: 5px 0;
+    padding: 5px;
+    border-left: 4px solid #ff69b4;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff1493;
+    text-decoration: underline;
+}
