@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Каталог букетов</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">🍓 Bouquets</div>
+  <button class="burger-menu" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="nav">
+    <ul class="nav-links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="bouquets.html">Букеты</a></li>
+      <li><a href="delivery.html">Доставка</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="intro-text fade-in" style="margin-top: 90px">
+  <h1>Наши букеты</h1>
+  <p>Выберите идеальный букет — для любого повода, любого вкуса.</p>
+</section>
+
+<section class="filter-section fade-in">
+  <button class="filter-btn" data-filter="all">Все</button>
+  <button class="filter-btn" data-filter="fruit">Фруктовые</button>
+  <button class="filter-btn" data-filter="sweat">Сладкие</button>
+  <button class="filter-btn" data-filter="meat">Мясные</button>
+  <button class="filter-btn" data-filter="mix">Микс</button>
+</section>
+
+<section class="card-section fade-in">
+  <div class="card" data-type="fruit" data-title="Фруктовый букет" data-img="img/bouquet1.jpg" data-desc="Яркий, свежий и полезный подарок.">
+    <img src="img/bouquet1.jpg" alt="Фруктовый букет">
+    <h2>Фруктовый букет</h2>
+    <p>Яркий, свежий и полезный подарок.</p>
+    <button class="buy-btn">Купить</button>
+  </div>
+  <div class="card" data-type="sweat" data-title="Шоколадный букет" data-img="img/bouquet7.jpg" data-desc="Вкусный, сладкий, романтичный.">
+    <img src="img/bouquet7.jpg" alt="Шоколадный букет">
+    <h2>Шоколадный букет</h2>
+    <p>Вкусный, сладкий, романтичный.</p>
+    <button class="buy-btn">Купить</button>
+  </div>
+  <div class="card" data-type="meat" data-title="Мясной букет" data-img="img/bouquet2.jpeg" data-desc="Сытно, красиво и нестандартно.">
+    <img src="img/bouquet2.jpeg" alt="Мясной букет">
+    <h2>Мясной букет</h2>
+    <p>Сытно, красиво и нестандартно.</p>
+    <button class="buy-btn">Купить</button>
+  </div>
+  <div class="card" data-type="mix" data-title="Микс букет" data-img="img/bouquet3.jpeg" data-desc="Фрукты, сыры и мясо в одной композиции.">
+    <img src="img/bouquet3.jpeg" alt="Смешанный букет">
+    <h2>Микс букет</h2>
+    <p>Фрукты, сыры и мясо в одной композиции.</p>
+    <button class="buy-btn">Купить</button>
+  </div>
+  <div class="card" data-type="cheese" data-title="Сырный букет" data-img="img/bouquet4.jpg" data-desc="Ассорти из лучших сыров и виноград.">
+    <img src="img/bouquet4.jpg" alt="Сырный букет">
+    <h2>Сырный букет</h2>
+    <p>Ассорти из лучших сыров и виноград.</p>
+    <button class="buy-btn">Купить</button>
+  </div>
+  <div class="card" data-type="mix" data-title="Букет в коробке" data-img="img/bouquet5.jpg" data-desc="Элегантная подача в стильной упаковке.">
+    <img src="img/bouquet5.jpg" alt="Букет в коробке">
+    <h2>Букет в коробке</h2>
+    <p>Элегантная подача в стильной упаковке.</p>
+    <button class="buy-btn">Купить</button>
+  </div>
+    <div class="card" data-type="meat" data-title="С колбасками" data-img="img/bouquet6.webp" data-desc="С разными видами колбасок.">
+    <img src="img/bouquet6.webp" alt="С колбасками">
+    <h2>C колбасками</h2>
+    <p>С разными видами колбасок.</p>
+    <button class="buy-btn">Купить</button>
+  </div>
+</section>
+
+<div class="popup-form" id="popupForm">
+  <div class="popup-content">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <img id="popupImage" src="" alt="Букет" style="width: 100%; border-radius: 10px; margin-bottom: 1rem;">
+    <h2 id="popupTitle">Оформить заказ</h2>
+    <p id="popupDesc"></p>
+    <form>
+      <input type="text" placeholder="Имя" required />
+      <input type="tel" placeholder="Телефон" required />
+      <input type="text" placeholder="Комментарий (необязательно)" />
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<section class="faq-section fade-in">
+  <h2>Часто задаваемые вопросы</h2>
+  <div class="faq-item">
+    <h3>Как оформить заказ?</h3>
+    <p>Просто выберите букет и нажмите кнопку «Купить». Заполните контактные данные — и мы свяжемся с вами для подтверждения.</p>
+  </div>
+  <div class="faq-item">
+    <h3>В какие города осуществляется доставка?</h3>
+    <p>Мы доставляем букеты по всей стране. Уточняйте сроки доставки при оформлении заказа.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Можно ли изменить состав букета?</h3>
+    <p>Да, вы можете указать свои пожелания в комментарии к заказу. Мы постараемся их учесть.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Какие способы оплаты вы принимаете?</h3>
+    <p>Мы принимаем оплату онлайн, наложенным платежом и наличными при получении.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 🍓 Bouquets. Все права защищены.</p>
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.card');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      cards.forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.type === filter) ? '' : 'none';
+      });
+    });
+  });
+
+  const popupForm = document.getElementById('popupForm');
+  const closeBtn = document.getElementById('closeBtn');
+  const popupTitle = document.getElementById('popupTitle');
+  const popupImage = document.getElementById('popupImage');
+  const popupDesc = document.getElementById('popupDesc');
+
+  document.querySelectorAll('.buy-btn').forEach(button => {
+    button.onclick = (e) => {
+      const card = e.target.closest('.card');
+      popupTitle.innerText = card.dataset.title;
+      popupImage.src = card.dataset.img;
+      popupImage.style.display = 'block';
+      popupDesc.innerText = card.dataset.desc;
+      popupForm.style.display = 'flex';
+    };
+  });
+
+  closeBtn.onclick = () => popupForm.style.display = 'none';
+  window.onclick = (e) => {
+    if (e.target == popupForm) popupForm.style.display = 'none';
+  };
+
+  document.querySelector('.burger-menu').addEventListener('click', () => {
+    document.querySelector('.nav').classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Съедобные букеты</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+    <div class="logo">🍓 Bouquets</div>
+    <button class="burger-menu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="nav">
+        <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="bouquets.html">Букеты</a></li>
+        <li><a href="delivery.html">Доставка</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+    </nav>
+    </header>
+
+  <section class="hero">
+    <img src="img/banner1.png" alt="Главный баннер">
+    <div class="hero-text">
+      <h1>Съедобные букеты — вкусно и красиво</h1>
+      <p>Порадуйте близких оригинальным подарком!</p>
+      <button id="orderBtn">Заказать</button>
+    </div>
+  </section>
+
+  <section class="intro-text fade-in">
+    <p>
+      Наши букеты сделаны из лучших продуктов: свежие фрукты, отборные сыры, изысканные колбасы. Они идеальны для любого повода — от дня рождения до корпоративного подарка.
+    </p>
+  </section>
+
+    <section class="carousel-section fade-in">
+    <h2 class="carousel-title">Популярные букеты</h2>
+    <div class="carousel">
+        <div class="carousel-track">
+        <div class="carousel-item" onclick="location.href='bouquets.html'">
+            <img src="img/bouquet1.jpg" alt="Фруктовый">
+            <h3>Фруктовый</h3>
+        </div>
+        <div class="carousel-item" onclick="location.href='bouquets.html'">
+            <img src="img/bouquet2.jpeg" alt="Мясной">
+            <h3>Мясной</h3>
+        </div>
+        <div class="carousel-item" onclick="location.href='bouquets.html'">
+            <img src="img/bouquet3.jpeg" alt="Микс">
+            <h3>Микс</h3>
+        </div>
+        <div class="carousel-item" onclick="location.href='bouquets.html'">
+            <img src="img/bouquet4.jpg" alt="Сырный">
+            <h3>Сырный</h3>
+        </div>
+        <div class="carousel-item" onclick="location.href='bouquets.html'">
+            <img src="img/bouquet5.jpg" alt="В коробке">
+            <h3>В коробке</h3>
+        </div>
+        <div class="carousel-item" onclick="location.href='bouquets.html'">
+            <img src="img/bouquet6.webp" alt="С колбасками">
+            <h3>С колбасками</h3>
+        </div>
+        <div class="carousel-item" onclick="location.href='bouquets.html'">
+            <img src="img/bouquet7.jpg" alt="Шоколадный">
+            <h3>Шоколадный</h3>
+        </div>
+        </div>
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+    </section>
+
+  <div class="popup-form" id="popupForm">
+    <div class="popup-content">
+      <span class="close-btn" id="closeBtn">&times;</span>
+      <h2>Оформить заказ</h2>
+      <form>
+        <input type="text" placeholder="Имя" required />
+        <input type="tel" placeholder="Телефон" required />
+        <input type="text" placeholder="Тип букета" />
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 🍓 Bouquets. Все права защищены.</p>
+  </footer>
+    <script>
+    const orderBtn = document.getElementById('orderBtn');
+    const popupForm = document.getElementById('popupForm');
+    const closeBtn = document.getElementById('closeBtn');
+
+    orderBtn.onclick = () => popupForm.style.display = 'flex';
+    closeBtn.onclick = () => popupForm.style.display = 'none';
+    window.onclick = (e) => {
+        if (e.target == popupForm) popupForm.style.display = 'none';
+    };
+
+    const track = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    let index = 0;
+
+    nextBtn.addEventListener('click', () => {
+        index++;
+        const itemWidth = document.querySelector('.carousel-item').offsetWidth + 20;
+        const maxScroll = (track.children.length - 1) * itemWidth;
+        if (index * itemWidth >= maxScroll) index = 0;
+        track.style.transform = `translateX(-${index * itemWidth}px)`;
+    });
+
+    prevBtn.addEventListener('click', () => {
+        index--;
+        if (index < 0) index = track.children.length - 1;
+        const itemWidth = document.querySelector('.carousel-item').offsetWidth + 20;
+        track.style.transform = `translateX(-${index * itemWidth}px)`;
+    });
+
+    document.querySelector('.burger-menu').addEventListener('click', () => {
+        document.querySelector('.nav').classList.toggle('active');
+    });
+    </script>
+</body>
+</html>

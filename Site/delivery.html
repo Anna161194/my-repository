@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Доставка</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">🍓 Bouquets</div>
+  <button class="burger-menu" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="nav">
+    <ul class="nav-links">
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="bouquets.html">Букеты</a></li>
+      <li><a href="delivery.html">Доставка</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="intro-text fade-in" style="margin-top: 90px">
+  <h1>Доставка</h1>
+  <p>Мы доставим ваш съедобный букет быстро, аккуратно и точно в срок.</p>
+</section>
+
+<section class="delivery-info fade-in">
+  <div class="delivery-block">
+    <h2>📍 Зоны доставки</h2>
+    <p>Мы осуществляем доставку по вашему городу и ближайшим районам. Для удалённых регионов — индивидуальные условия.</p>
+  </div>
+  <div class="delivery-block">
+    <h2>🚚 Сроки</h2>
+    <p>Доставка в пределах города — в течение 2-3 часов. Возможна доставка "день в день" при заказе до 14:00.</p>
+  </div>
+  <div class="delivery-block">
+    <h2>💸 Стоимость</h2>
+    <p>Бесплатная доставка от 1500 ₽. До этой суммы — 200 ₽ по городу.</p>
+  </div>
+  <div class="delivery-block">
+    <h2>🎯 Условия</h2>
+    <p>Уточняйте адрес и контактный номер получателя. Мы согласуем время доставки заранее.</p>
+  </div>
+</section>
+
+<section class="faq-section fade-in">
+  <h2>Часто задаваемые вопросы</h2>
+  <div class="faq-item">
+    <h3>Можно ли доставить букет в конкретное время?</h3>
+    <p>Да, укажите желаемое время при оформлении заказа, и мы постараемся учесть пожелание.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Кто вручает букет?</h3>
+    <p>Наш курьер — вежливый, опрятный и пунктуальный. Если хотите — доставим анонимно 😉</p>
+  </div>
+  <div class="faq-item">
+    <h3>Можно ли доставить букет с запиской?</h3>
+    <p>Конечно! Просто укажите текст в комментарии при заказе.</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 🍓 Bouquets. Все права защищены.</p>
+</footer>
+
+<script>
+  document.querySelector('.burger-menu').addEventListener('click', () => {
+    document.querySelector('.nav').classList.toggle('active');
+  });
+</script>
+
+</body>
+</html>
