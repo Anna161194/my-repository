@@ -423,6 +423,67 @@ a {
   background-color: #4C75A3;
 }
 
+.about-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  background: #fffaf8; /* Фон в стиле body */
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  color: #e94e77; /* Цвет заголовков, как в faq-section */
+  margin-bottom: 1.5rem;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.about-item {
+  background: #fff; /* Фон карточек, как в card-section */
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Тень, как в card-section */
+  transition: transform 0.3s ease;
+}
+
+.about-item:hover {
+  transform: translateY(-5px); /* Эффект, как у карточек */
+}
+
+.about-item h3 {
+  font-size: 1.2rem;
+  color: #e94e77; /* Цвет, как в faq-item h3 */
+  margin-bottom: 0.5rem;
+}
+
+.about-item p {
+  font-size: 0.9rem;
+  color: #555; /* Цвет текста, как в faq-item */
+  line-height: 1.5;
+}
+
+.about-cta {
+  margin: 1.5rem auto;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 20px; /* Скругление, как у filter-btn */
+  background: #ff6f61; /* Основной брендовый цвет */
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.about-cta:hover {
+  background: #e65b50; 
+}
+
 /* Animations */
 @keyframes fadeUp {
   from {
@@ -468,6 +529,12 @@ a {
     font-size: 1.8rem;
   }
   .card-section {
+    grid-template-columns: 1fr;
+  }
+  .about-section {
+    padding: 1rem;
+  }
+  .about-content {
     grid-template-columns: 1fr;
   }
 }
